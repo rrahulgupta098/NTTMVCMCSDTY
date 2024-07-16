@@ -1,0 +1,20 @@
+﻿body {
+    background-color:azure;
+}
+
+.main {
+    background-color: aqua;
+    
+    margin-top: 250px;
+    margin-left: 500px;
+    margin-right: 600px;
+}
+
+.fm {
+    display: block;
+   
+    margin-left:10px;
+    margin-right:10px;
+    padding:4px 7px 8px 9px;
+   
+}  

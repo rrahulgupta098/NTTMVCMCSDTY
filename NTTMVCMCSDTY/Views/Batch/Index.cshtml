@@ -1,0 +1,68 @@
+﻿@model NTTMVCMCSDTY.ListBatchvm
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <h2>Batch Details</h2>
+    <div>
+        <table style="width:80%" class="tbl table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        BatchID
+                    </td>
+                    <td>
+                        StartDate
+                    </td>
+                    <td>
+                        EndDate
+                    </td>
+                    <td>
+                        TrainerId
+                    </td>
+                    <td>
+                        TrainingModule
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rec in Model.Lst)
+                {
+                    <tr>
+                        <td>
+                            @rec.BatchID
+                        </td>
+                        <td>
+                            @rec.StartDate.ToShortDateString()
+                        </td>
+                        <td>
+                            @rec.EndDate.ToShortDateString()
+                        </td>
+                        <td>
+                            @rec.TrainerId
+                        </td>
+                        <td>
+                            @rec.TrainingModule
+                        </td>
+                        <td>
+                            <a href="~/Batch/DeleteBatch?ID=@rec.BatchID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="~/Add_Batch/Index">Add Batch</a>
+        <br />
+        <a href="~/ADMIN_DASHBOARD/Index">Go to Home</a>
+    </div>
+</body>
+</html>

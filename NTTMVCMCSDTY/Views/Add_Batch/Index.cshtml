@@ -1,0 +1,64 @@
+﻿@model NTTMVCMCSDTY.AddBatchInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <h2>Add Batch</h2>
+    <form method="post">
+        <div>
+            <table style="width:80%" class="tbl table-striped">
+                <tr>
+                    <td>
+                        StartDate
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.StartDate, new { type = "Date" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        EndDate
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.EndDate, new { type = "Date" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TrainerID
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.TrainerId, Model.TrNameLst)
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ModuleID
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.TrainingModule, Model.ModuleNameLst)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Add Batch" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <a href="~/Batch/Index">Batch Page</a>
+        </div>
+        @ViewBag.Msg
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model NTTMVCMCSDTY.AddModuleInfo
+@{
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditModule</title>
+   
+</head>
+<body>
+    <h2>Edit Training Module Details</h2>
+    <div>
+        <form method="post">
+            <div>
+                <table style="width:80%" class="tbl table-striped">
+                    <tr>
+                        <td>
+                            ModuleName
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Module_Name)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Edit Module" />
+                            <input type="hidden" name="ID" id="ID" value="@Model.ID" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <a href="~/Training_Module_Details/Index">Training module Page</a>
+            </div>
+            @ViewBag.Msg
+        </form>
+    </div>
+</body>
+</html>

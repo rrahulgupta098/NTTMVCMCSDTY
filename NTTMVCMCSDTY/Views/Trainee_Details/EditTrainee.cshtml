@@ -1,0 +1,40 @@
+﻿@model NTTMVCMCSDTY.AddTraineeInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditTrainee</title>
+  
+</head>
+<body>
+    <h2>Edit Trainee Details</h2>
+    <div>
+
+        <form method="post">
+            <div>
+                <table style="width:100%" class="tbl table-striped">
+                    <tr>
+                        <td>
+                            TraineeName
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Edit Trainee" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            @ViewBag.Msg
+        </form>
+    </div>
+</body>
+</html>

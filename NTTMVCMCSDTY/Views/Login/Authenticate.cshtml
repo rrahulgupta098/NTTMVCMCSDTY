@@ -1,0 +1,45 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Authenticate</title>
+     <link rel="stylesheet" type="text/css" href="~/Authenticate.css">
+</head>
+<body>
+    <div class="main">
+    <form class="fm" method="post">
+        <div>
+            <h1 style="text-align:center">Login Page</h1>
+            <table>
+                <tr>
+                    <td>username</td>
+                    <td>
+                        <input type="text" id="un" name="un" placeholder="User Name" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" id="pwd" name="pwd" placeholder="Password" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Log in" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @ViewBag.ErrMsg
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿@model NTTMVCMCSDTY.AddTrainerinfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditTrainer</title>
+   
+</head>
+<body>
+    <h2>Edit Details</h2>
+    <div>
+        <form method="post">
+            <div>
+                <table style="width:80%" class="tbl table-striped">
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Skills
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Skill)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Edit Trainer" />
+                            <input type="hidden" name="ID" id="ID" value="@Model.ID" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <a href="~/Trainer_Details/Index">Trainer Page</a>
+            </div>
+            @ViewBag.Msg
+        </form>
+    </div>
+</body>
+</html>
